@@ -1,4 +1,4 @@
-# TUTORIAL MODULE 1b
+# TUTORIAL MODULE 1a
 
 # Exercise 1
 print(88*23948)
