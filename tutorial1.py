@@ -7,8 +7,7 @@ y = 'Brown'
 print(x+' '+y)
 
 # Exercise 2
-x = ['Jeff',
-'Nadia','Li']
+x = ['Jeff','Nadia','Li']
 x.insert(0,'Erika')
 print(x[0])
 
