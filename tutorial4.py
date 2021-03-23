@@ -98,8 +98,9 @@ uClient.close()
  
 ### Interpret the page source as html
 soup = BeautifulSoup(html, 'html.parser')
+newreleases = soup.find('div',class_='new-release-items-container')
 
-for i in soup.find_all('div',class_='title'):
+for i in newreleases.find_all('div',class_='title'):
 	print(i.find('a').getText())
 	
 # Exercise 4
@@ -130,8 +131,9 @@ uClient.close()
  
 ### Interpret the page source as html
 soup = BeautifulSoup(html, 'html.parser')
+newreleases = soup.find('div',class_='new-release-items-container')
 
-for i in soup.find_all('div',class_='meta-container'):
+for i in newreleases.find_all('div',class_='meta-container'):
 	artist = i.find('div',class_='artist').getText().strip()
 	titlediv = i.find('div',class_='title')
 	title = titlediv.getText().strip()
@@ -173,7 +175,11 @@ soup = BeautifulSoup(html, 'html.parser')
 
 x = []
 
-for i in soup.find_all('div',class_='meta-container'):
+### Interpret the page source as html
+soup = BeautifulSoup(html, 'html.parser')
+newreleases = soup.find('div',class_='new-release-items-container')
+
+for i in newreleases.find_all('div',class_='meta-container'):
 	artist = i.find('div',class_='artist').getText().strip()
 	titlediv = i.find('div',class_='title')
 	title = titlediv.getText().strip()
