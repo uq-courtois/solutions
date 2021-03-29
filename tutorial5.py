@@ -26,10 +26,11 @@ uClient.close()
  
 ### Interpret the page source as html
 soup = BeautifulSoup(html, 'html.parser')
+searchresultdiv = soup.find('div',class_="searchresults mw-searchresults-has-iw")
 
 searchresults = []
 
-for i in soup.find_all('div',class_='mw-search-result-heading'):
+for i in searchresultdiv.find_all('div',class_='mw-search-result-heading'):
 	searchresult = 'http://www.wikipedia.com'+i.find('a')['href']
 	searchresults.append(searchresult)
 	print(searchresult)
