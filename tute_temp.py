@@ -178,3 +178,42 @@ data.to_csv('alexa.csv',sep=',',index=False)
 
 # Exercise 8
 
+from urllib.request import Request, urlopen
+import ssl
+from bs4 import BeautifulSoup
+ 
+url = 'https://en.wikipedia.org/w/index.php?title=Special:Search&limit=100&offset=0&ns0=1&sort=last_edit_desc&sort=last_edit_desc&search=brisbane&advancedSearch-current=%7B%7D' 
+ 
+headers={'User-Agent': 'Mozilla/5.0 (Macinstosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36(KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+req = Request(url, headers=headers)
+context = ssl._create_unverified_context()
+ 
+uClient= urlopen(req, context=context)
+html = uClient.read()
+uClient.close()
+ 
+soup = BeautifulSoup(html, 'html.parser')
+
+searchresults = []
+
+for i in soup.find_all('div',class_='mw-search-result-heading'):
+	searchresult = 'http://www.wikipedia.com'+i.find('a')['href']
+	searchresults.append(searchresult)
+	print(searchresult)
+
+for url in searchresults:
+
+	headers={'User-Agent': 'Mozilla/5.0 (Macinstosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36(KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+	req = Request(url, headers=headers)
+	context = ssl._create_unverified_context()
+	
+	uClient= urlopen(req, context=context)
+	html = uClient.read()
+	uClient.close()
+
+	soup = BeautifulSoup(html, 'html.parser')
+
+	articletitle = soup.find('h1',class_='firstHeading').getText()
+	articletext = soup.find('div',class_='mw-parser-output').getText()
+	print(articletext)
+	open(articletitle+".txt", "w", encoding='utf8').write(articletext)
