@@ -159,9 +159,7 @@ for url in urls:
 	
 	soup = BeautifulSoup(html, 'html.parser')
 	tablecontainer = soup.find('div',class_='tableContainer')
-
-	tablecontainer = soup.find('div',class_='tableContainer')
-
+	
 	for i in soup.find_all('div',class_='tr site-listing'):
 		rowinfo = i.find_all('div',class_='td')
 		rank = rowinfo[0].getText().strip()
