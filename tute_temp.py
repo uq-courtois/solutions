@@ -77,7 +77,7 @@ tablecontainer = soup.find('div',class_='tableContainer')
 urls = []
 
 for i in tablecontainer.find_all('li'):
-	url = 'https://www.alexa.com/'+i.find('a')['href']
+	url = 'https://www.alexa.com/topsites/'+i.find('a')['href']
 	print(url)
 	urls.append(url)
 
