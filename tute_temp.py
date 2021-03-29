@@ -109,3 +109,72 @@ for i in soup.find_all('div',class_='tr site-listing'):
 	country = url.split('/')[-1]
 	print(country,rank,domain)
 	
+# Exercise 7
+
+from urllib.request import Request, urlopen
+import ssl
+from bs4 import BeautifulSoup
+import pause
+import pandas as pd
+ 
+url = 'https://www.alexa.com/topsites/countries' 
+
+data = []
+
+headers={'User-Agent': 'Mozilla/5.0 (Macinstosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36(KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+req = Request(url, headers=headers)
+context = ssl._create_unverified_context()
+ 
+uClient= urlopen(req, context=context)
+html = uClient.read()
+uClient.close()
+ 
+soup = BeautifulSoup(html, 'html.parser')
+tablecontainer = soup.find('div',class_='tableContainer')
+
+urls = []
+
+for i in tablecontainer.find_all('li'):
+	url = 'https://www.alexa.com/topsites/'+i.find('a')['href']
+	print(url)
+	urls.append(url)
+
+print('Harvested',len(urls),'country URLs')
+
+pause.seconds(3)
+
+for url in urls:
+
+	print('Scraping',url)
+ 
+	headers={'User-Agent': 'Mozilla/5.0 (Macinstosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36(KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
+	req = Request(url, headers=headers)
+	context = ssl._create_unverified_context()
+	
+	uClient= urlopen(req, context=context)
+	html = uClient.read()
+	uClient.close()
+	
+	soup = BeautifulSoup(html, 'html.parser')
+	tablecontainer = soup.find('div',class_='tableContainer')
+
+	tablecontainer = soup.find('div',class_='tableContainer')
+
+	for i in soup.find_all('div',class_='tr site-listing'):
+		rowinfo = i.find_all('div',class_='td')
+		rank = rowinfo[0].getText().strip()
+		domain = rowinfo[1].getText().strip()
+		country = url.split('/')[-1]
+		print(country,rank,domain)
+
+		data.append({
+			'country':country,
+			'rank':rank,
+			'domain':domain,
+		})
+
+data = pd.DataFrame(data) 
+data.to_csv('alexa.csv',sep=',',index=False)
+
+# Exercise 8
+
