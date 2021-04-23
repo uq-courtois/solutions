@@ -192,7 +192,9 @@ headers = {
     'Authorization': 'Bearer BQAw-sNUDTh3nvbM604iBCz_UvabwGUaVGk9Pzzr8iCikYkdo4CFgGJr93WIMyNanK80o3egMWoHazIvux5Sn7K5HYvQdhIOR6LtmwDFvhNKslnjasHGCOkNlVnf1cy03WaMEKYK5LJWVD2B_ZVOWfRcat0d5YZkUUUzAPP4_if3Zr4Ek4vaGbKLa4hRRFkbaU_lZst-qJWKKKW151u6n26ElvyEaqI4PNfR6fH-fCSB32jIwFgr2nWHbEkGzwRlrkGLQZkj1R_j14JeyXr20m4',
 }
 
-response = requests.get('https://api.spotify.com/v1/audio-features/25yQPHgC35WNnnOUqFhgVR', headers=headers)
+trackid = '25yQPHgC35WNnnOUqFhgVR'
+
+response = requests.get('https://api.spotify.com/v1/audio-features/'+trackid, headers=headers)
 
 json_data = json.loads(response.text) # convert json response to text/dict
 
