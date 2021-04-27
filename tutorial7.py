@@ -105,7 +105,7 @@ print(response) # Optional, informs on whether call was successful (Code [200])
  
 json_data = json.loads(response.text) # convert json response to text/dict
  
-print(json.dumps(json_data['tracks']['items'][0]['album']['name'], sort_keys=True, indent=3)) # Print first album name
+print(json.dumps(json_data['tracks']['items'][0]['album']['name'], sort_keys=True, indent=3)) # Print first 
 
 ### Exercise 5
 
@@ -131,7 +131,7 @@ print(response) # Optional, informs on whether call was successful (Code [200])
  
 json_data = json.loads(response.text) # convert json response to text/dict
  
-print(json.dumps(json_data['tracks']['items'][0]['id'], sort_keys=True, indent=3)) # Print first album name
+print(json.dumps(json_data['tracks']['items'][0]['id'], sort_keys=True, indent=3)) # Print track id
 
 ### Exercise 6
 
