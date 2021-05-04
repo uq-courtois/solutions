@@ -4,7 +4,12 @@
 #http://www.digitalanalytics.id.au/static/files/billboard2.csv
 
 #http://www.digitalanalytics.id.au/static/files/billboard_additional.csv
-  
+
+### Get unique values in variable
+
+print(df['variable'].unique())
+print(len(df['variable'].unique()))
+
 ### Exercise 7
 
 def decadef(x):
