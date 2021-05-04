@@ -28,11 +28,11 @@ df['decade'] = df['year'].apply(lambda x: decadef(x))
 
 def popularityf(x):
 	if x < 33:
-		popularity = 'low'
+		popularity = 1
 	if x >= 33 and x < 66:
-		popularity = 'medium'
+		popularity = 2
 	if x >= 66:
-		popularity = 'high'
+		popularity = 3
 
 	return popularity
 
