@@ -191,3 +191,7 @@ plt.plot(grouped['year'],grouped['acousticness'],label="Acousticness")
 plt.legend() # Add a legend
 plt.savefig('timeseries.pdf') # Save the figure
 plt.clf() # Clear figure
+
+### CORRELATION
+print(rp.correlation.corr_pair(df[['year', 'danceability']]))
+print(rp.correlation.corr_pair(df[['year', 'acousticness']]))
