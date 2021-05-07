@@ -2,10 +2,8 @@
 
 import pandas as pd
  
-df1 = pd.read_csv('http://www.digitalanalytics.id.au/static/files/billboard1.csv
-',sep=',') 
-df2 = pd.read_csv('http://www.digitalanalytics.id.au/static/files/billboard2.csv
-',sep=',')
+df1 = pd.read_csv('http://www.digitalanalytics.id.au/static/files/billboard1.csv',sep=',') 
+df2 = pd.read_csv('http://www.digitalanalytics.id.au/static/files/billboard2.csv',sep=',')
  
 print(df1.info())
 print(df2.info())
@@ -21,8 +19,7 @@ df.to_csv('billboard.csv',sep=',',index=False)
 import pandas as pd
  
 df1 = pd.read_csv('billboard.csv',sep=',')
-df2 = pd.read_csv('http://www.digitalanalytics.id.au/static/files/billboard_additional.csv
-',sep=',')
+df2 = pd.read_csv('http://www.digitalanalytics.id.au/static/files/billboard_additional.csv',sep=',')
  
 print(df1.info()) # 4 variables, 19342 rows
 print(df2.info()) # 6 variables, 19335 rows
