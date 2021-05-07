@@ -35,7 +35,7 @@ import pandas as pd
 
 df = pd.read_csv('billboard_merged.csv',sep=',') 
 
-grouped = data.groupby(['artist'], as_index=False)[['danceability']].sum()
+grouped = df.groupby(['artist'], as_index=False)[['danceability']].sum()
  
 grouped = grouped.sort_values(by=['danceability'], ascending=False)
 
@@ -181,7 +181,7 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('billboard_merged.csv',sep=',')
 
 # Build aggregated dataframe
-grouped = data.groupby(['year'], as_index=False)[['danceability','acousticness']].std()
+grouped = df.groupby(['year'], as_index=False)[['danceability','acousticness']].std()
 
 print(grouped)
 
