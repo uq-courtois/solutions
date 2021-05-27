@@ -193,5 +193,5 @@ plt.savefig('timeseries.pdf') # Save the figure
 plt.clf() # Clear figure
 
 ### CORRELATION
-print(rp.correlation.corr_pair(df[['year', 'danceability']]))
-print(rp.correlation.corr_pair(df[['year', 'acousticness']]))
+print(rp.correlation.corr_pair(grouped[['year', 'danceability']]))
+print(rp.correlation.corr_pair(grouped[['year', 'acousticness']]))
