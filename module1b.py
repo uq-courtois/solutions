@@ -134,3 +134,27 @@ for d in x:
 	y.append(d['age'])
 
 print(sum(y)/len(y))
+
+########## ADDITIONAL - DONE IN THE FIRST TUTORIALS ONLY
+
+# Use the code below to generate a list of 10 random numbers from 0 to 15
+# For loop through the list x and only print the numbers larger than 5
+
+import random as rd
+x = rd.sample(range(0, 15), 10)
+print(x)
+
+for i in x:
+	if i > 5:
+		print(i)
+
+# Generate a list x of 15 random numbers from 1 to 51
+# Loop through x and print each number that is smaller than 5 or larger than 25
+
+import random as rd
+x = rd.sample(range(1, 51), 15)
+print(x)
+
+for i in x:
+	if i < 5 or i > 25:
+		print(i)
