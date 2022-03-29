@@ -27,6 +27,8 @@ plays = [] # Empty list
 		
 for d in dataset:
 	if d['Artist'] == 'Dire Straits': # If value of Artist equals Dire Straits
+	# Alternative conditional that works fine as well: 
+	#if 'Dire Straits' in d['Artist']:
 		print(d['Track'])
 	plays.append(d['Plays']) # Add the value of plays to list plays per iteration
 
