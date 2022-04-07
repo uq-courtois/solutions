@@ -102,6 +102,12 @@ div = soup.find('div',class_='image-post post-view')
 imgurl = 'https://digitalanalytics.id.au/static/materials/9gagreal/' + div.find('img')['src']
 print(imgurl)
 
+# Copy/paste from shortcuts
+filename = imgurl.split('/')[-1]
+imgfile = open(filename,'wb') 
+imgfile.write(urlopen(imgurl).read())
+imgfile.close() 
+	
 ### Exercise 5
 # Get the HTML from
 # https://digitalanalytics.id.au/static/materials/9gagreal2/
