@@ -18,7 +18,7 @@ data = {
 			 'shape':'cube',
 			 'length':4,
 			 'width':4,
-			 'heigth':4
+			 'height':4
 		 },
    ]
 }
