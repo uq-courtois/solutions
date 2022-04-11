@@ -38,8 +38,8 @@ headers = {
 }
 
 params = {
-    'time_range': 'medium_term',
-		'limit':'50'
+	'time_range': 'medium_term',
+	'limit':'50'
 }
 
 response = requests.get('https://api.spotify.com/v1/me/top/artists', headers=headers, params=params)
