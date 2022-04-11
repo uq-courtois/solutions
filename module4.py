@@ -39,10 +39,13 @@ headers = {
 
 params = {
     'time_range': 'medium_term',
+		'limit':'50'
 }
 
 response = requests.get('https://api.spotify.com/v1/me/top/artists', headers=headers, params=params)
 data = json.loads(response.text) 
 
 for i in data['items']:
-	print(i['name'])
+	print(i['name']+';')
+	
+# https://docs.google.com/forms/d/1o4ZaSYEY1MRM64d42Z_N7V8QphNnbIvf35u2dODA4-k/viewform?edit_requested=true&fbzx=4792520770300365509
