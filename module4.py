@@ -45,6 +45,7 @@ params = {
 }
 
 response = requests.get('https://api.spotify.com/v1/me/top/artists', headers=headers, params=params)
+print(response)
 data = json.loads(response.text) 
 
 for i in data['items']:
