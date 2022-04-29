@@ -4,7 +4,7 @@ import json
 import requests
  
 # You will need to change the authorization key into an active one, this one will be expired - Get it - when you are logged in to Spotify - from https://developer.spotify.com/console/get-search-item/ (scroll down and click get Token (DO NOT USE SAFARI AS YOUR BROWSER)
-token = 'BQDxdpvuuhlnQsQARr8My4LyqN0GiD3_nMUdX7Z3MfSYe1dwyFAnnzrjX1_C8kW8Fr3svTONsG1jwmp9XVQKyID7CtoEylLI55oT31is_YIzpWquAS0T4dl'
+token = 'BQDxdpvuuhlnQsQARr8My4LyqN0GiD3_nMUdX7Z3MfSYe1dwyFAnnzrjX1_C8kW8Fr3svTONsG1jwmp9XVQKyID7CtoEylLI55oT31is_YIzpWquAS0T4dl-LSFmf4JAIuZFpiCbL2SYMI0lremN3_dnasGX9U3jw9SNDVFbisXPlcM84ax5zlm_oS-Tgn34UtGYuRebFNOF8LkxFXAzN1NbiMiUfLAbHH3YSerX3IxIZw4jvOB0JLwlOEc_kpHXzjkviLHBuwp0crJViyBpP6g'
  
 headers = {
     'Accept': 'application/json',
@@ -14,7 +14,7 @@ headers = {
  
 # Set parameters
 params = (
-        ('q', 'Taylor Swift'),
+        ('q', 'BTS'),
         ('type', 'artist'),
 				('limit', '1'),
     )
@@ -37,7 +37,7 @@ import json
 import requests
  
 # You will need to change the authorization key into an active one, this one will be expired - Get it - when you are logged in to Spotify - from https://developer.spotify.com/console/get-search-item/ (scroll down and click get Token (DO NOT USE SAFARI AS YOUR BROWSER)
-token = 'BQDxdpvuuhlnQsQARr8My4LyqN0GiD3_nMUdX7Z3MfSYe1dwyFAnnzrjX1_C8kW8Fr3svTONsG1jwmp9XVQKyID7CtoEylLI55oT31is_YIzpWquAS0T4dl'
+token = 'BQDxdpvuuhlnQsQARr8My4LyqN0GiD3_nMUdX7Z3MfSYe1dwyFAnnzrjX1_C8kW8Fr3svTONsG1jwmp9XVQKyID7CtoEylLI55oT31is_YIzpWquAS0T4dl-LSFmf4JAIuZFpiCbL2SYMI0lremN3_dnasGX9U3jw9SNDVFbisXPlcM84ax5zlm_oS-Tgn34UtGYuRebFNOF8LkxFXAzN1NbiMiUfLAbHH3YSerX3IxIZw4jvOB0JLwlOEc_kpHXzjkviLHBuwp0crJViyBpP6g'
  
 headers = {
     'Accept': 'application/json',
@@ -47,7 +47,7 @@ headers = {
  
 # Set parameters
 params = (
-        ('q', 'Taylor Swift'),
+        ('q', 'BTS'),
         ('type', 'artist'),
 				('limit', '1'),
     )
@@ -71,7 +71,7 @@ import json
 import requests
  
 # You will need to change the authorization key into an active one, this one will be expired - Get it - when you are logged in to Spotify - from https://developer.spotify.com/console/get-search-item/ (scroll down and click get Token (DO NOT USE SAFARI AS YOUR BROWSER)
-token = 'BQDxdpvuuhlnQsQARr8My4LyqN0GiD3_nMUdX7Z3MfSYe1dwyFAnnzrjX1_C8kW8Fr3svTONsG1jwmp9XVQKyID7CtoEylLI55oT31is_YIzpWquAS0T4dl'
+token = 'BQDxdpvuuhlnQsQARr8My4LyqN0GiD3_nMUdX7Z3MfSYe1dwyFAnnzrjX1_C8kW8Fr3svTONsG1jwmp9XVQKyID7CtoEylLI55oT31is_YIzpWquAS0T4dl-LSFmf4JAIuZFpiCbL2SYMI0lremN3_dnasGX9U3jw9SNDVFbisXPlcM84ax5zlm_oS-Tgn34UtGYuRebFNOF8LkxFXAzN1NbiMiUfLAbHH3YSerX3IxIZw4jvOB0JLwlOEc_kpHXzjkviLHBuwp0crJViyBpP6g'
  
 headers = {
     'Accept': 'application/json',
@@ -81,7 +81,7 @@ headers = {
  
 # Set parameters
 params = (
-        ('q', 'Taylor Swift'),
+        ('q', 'BTS'),
         ('type', 'artist'),
 				('limit', '1'),
     )
@@ -114,7 +114,7 @@ data = data.T.to_dict().values()
 for i in data:
 	print(i['artist'])
 
-	token = 'BQDxdpvuuhlnQsQARr8My4LyqN0GiD3_nMUdX7Z3MfSYe1dwyFAnnzrjX1_C8kW8Fr3svTONsG1jwmp9XVQKyID7CtoEylLI55oT31is_YIzpWquAS0T4dl'
+	token = 'BQDxdpvuuhlnQsQARr8My4LyqN0GiD3_nMUdX7Z3MfSYe1dwyFAnnzrjX1_C8kW8Fr3svTONsG1jwmp9XVQKyID7CtoEylLI55oT31is_YIzpWquAS0T4dl-LSFmf4JAIuZFpiCbL2SYMI0lremN3_dnasGX9U3jw9SNDVFbisXPlcM84ax5zlm_oS-Tgn34UtGYuRebFNOF8LkxFXAzN1NbiMiUfLAbHH3YSerX3IxIZw4jvOB0JLwlOEc_kpHXzjkviLHBuwp0crJViyBpP6g'
 	 
 	headers = {
 	    'Accept': 'application/json',
@@ -150,7 +150,7 @@ import json
 import requests
  
 # You will need to change the authorization key into an active one, this one will be expired - Get it - when you are logged in to Spotify - from https://developer.spotify.com/console/get-search-item/ (scroll down and click get Token (DO NOT USE SAFARI AS YOUR BROWSER)
-token = 'BQDxdpvuuhlnQsQARr8My4LyqN0GiD3_nMUdX7Z3MfSYe1dwyFAnnzrjX1_C8kW8Fr3svTONsG1jwmp9XVQKyID7CtoEylLI55oT31is_YIzpWquAS0T4dl'
+token = 'BQDxdpvuuhlnQsQARr8My4LyqN0GiD3_nMUdX7Z3MfSYe1dwyFAnnzrjX1_C8kW8Fr3svTONsG1jwmp9XVQKyID7CtoEylLI55oT31is_YIzpWquAS0T4dl-LSFmf4JAIuZFpiCbL2SYMI0lremN3_dnasGX9U3jw9SNDVFbisXPlcM84ax5zlm_oS-Tgn34UtGYuRebFNOF8LkxFXAzN1NbiMiUfLAbHH3YSerX3IxIZw4jvOB0JLwlOEc_kpHXzjkviLHBuwp0crJViyBpP6g'
  
 headers = {
     'Accept': 'application/json',
@@ -160,7 +160,7 @@ headers = {
  
 # Set parameters
 params = (
-        ('q', 'Taylor Swift Shake it off'),
+        ('q', 'in your eyes the weeknd'),
         ('type', 'track'),
 				('limit', '1'),
     )
@@ -188,7 +188,7 @@ import requests
 
 # You will need to change the authorization key into an active one, this one will be expired - Get it - when you are logged in to Spotify - from https://developer.spotify.com/console/get-search-item/ (scroll down and click get Token (DO NOT USE SAFARI AS YOUR BROWSER)
 
-token = 'BQDxdpvuuhlnQsQARr8My4LyqN0GiD3_nMUdX7Z3MfSYe1dwyFAnnzrjX1_C8kW8Fr3svTONsG1jwmp9XVQKyID7CtoEylLI55oT31is_YIzpWquAS0T4dl'
+token = 'BQDxdpvuuhlnQsQARr8My4LyqN0GiD3_nMUdX7Z3MfSYe1dwyFAnnzrjX1_C8kW8Fr3svTONsG1jwmp9XVQKyID7CtoEylLI55oT31is_YIzpWquAS0T4dl-LSFmf4JAIuZFpiCbL2SYMI0lremN3_dnasGX9U3jw9SNDVFbisXPlcM84ax5zlm_oS-Tgn34UtGYuRebFNOF8LkxFXAzN1NbiMiUfLAbHH3YSerX3IxIZw4jvOB0JLwlOEc_kpHXzjkviLHBuwp0crJViyBpP6g'
 
 headers = {
     'Accept': 'application/json',
@@ -221,7 +221,7 @@ import requests
 
 # You will need to change the authorization key into an active one, this one will be expired - Get it - when you are logged in to Spotify - from https://developer.spotify.com/console/get-search-item/ (scroll down and click get Token (DO NOT USE SAFARI AS YOUR BROWSER)
 
-token = 'BQDxdpvuuhlnQsQARr8My4LyqN0GiD3_nMUdX7Z3MfSYe1dwyFAnnzrjX1_C8kW8Fr3svTONsG1jwmp9XVQKyID7CtoEylLI55oT31is_YIzpWquAS0T4dl'
+token = 'BQDxdpvuuhlnQsQARr8My4LyqN0GiD3_nMUdX7Z3MfSYe1dwyFAnnzrjX1_C8kW8Fr3svTONsG1jwmp9XVQKyID7CtoEylLI55oT31is_YIzpWquAS0T4dl-LSFmf4JAIuZFpiCbL2SYMI0lremN3_dnasGX9U3jw9SNDVFbisXPlcM84ax5zlm_oS-Tgn34UtGYuRebFNOF8LkxFXAzN1NbiMiUfLAbHH3YSerX3IxIZw4jvOB0JLwlOEc_kpHXzjkviLHBuwp0crJViyBpP6g'
 
 headers = {
     'Accept': 'application/json',
